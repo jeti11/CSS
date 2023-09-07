@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 사용하기 2</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        p {
+            font-size: large;
+            /* important 사용 시 해당 속성은 최우선으로 적용 됨, 아래에 동일 속성의 값이 변경되더라도 해당 속성은 변경되지 않음 */
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h1 {
+            color: chartreuse;
+            font-weight: 400;
+            text-align: end;
+        }
+
+        #blue-text {
+            font-size: 24px;
+            color: blue;
+        }
+
+        .red-text {
+            color: red;
+            font-style: normal;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+        #div01 {
+            margin: 20px;
+            border: 1px solid black;
+        }
+
+        #div01 > h4 {
+            color: brown;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        #div01 h4 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<img src="001.jpg" alt=""><hr>
+
+<div>
+    <h1>태그 선택자</h1>
+    <p>대통령은 제3항과 제4항의 사유를 지체없이 공포하여야 한다.</p>
+    <p>국정감사 및 조사에 관한 절차 기타 필요한 사항은 법률로 정한다.</p>
+    <p>국가안전보장회의는 대통령이 주재한다.<br>국가는 주택개발정책등을 통하여 모든 국민이 쾌적한 주거생활을 할 수 있도록 노력하여야 한다.</p>
+</div>
+
+    <br><hr><br>
+    <div style="margin: 10px;">
+        <h3>id 선택자 사용하기</h3>
+        <h4>기본 모양 사용</h4>
+        <h4 id="blue-text">id 선택자로 모양 변경</h4>
+        <h4>기본 모양 사용</h4>
+
+        <br><br>
+        <h3>class 선택자 사용하기</h3>
+        <p>변경하지 않은 p태그</p>
+        <p class="red-text">class 선택자로 변경한 p태그</p>
+        <h4 class="red-text">class 선택자로 변경한 h4태그</h4>
+        <h5 class="red-text bg-yellow">class 선택자로 변경한 h5태그</h5>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+        <h3>자식 선택자, 자손 선택자</h3>
+        <div id="div01">
+            <h4>자식 선택자로 선택되는 태그</h4>
+            <div>
+                <h4>자식선택자로 선택되지 않는 태그</h4>
+                <h4>
+                    <ul>
+                        <li>메뉴 1</li>
+                        <li>메뉴 2</li>
+                        <li>메뉴 3</li>
+                    </ul>
+                </h4>
+        </div>
+    </div>
+</body>
+
+</html>
